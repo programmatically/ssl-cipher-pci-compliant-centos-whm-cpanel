@@ -21,5 +21,5 @@ Please remember you must also look into editing your Cpanel Config, Exim Config 
 
 ###LEGAL
 
-This content is a guide. No libaliy (ie. security holes, content loss or server downtime) or support, finance, etc can be applied for usage of this content what-so-ever so if you use this guide you are entirly responsible for anything that may or does go wrong.
+This content is a guide. No liability (ie. security holes, content loss or server downtime) or support, finance, etc can be applied for usage of this content what-so-ever so if you use this guide you are entirly responsible for anything that may or does go wrong.
 
