@@ -17,6 +17,9 @@ after updating these files you must rebuild
 ###/scripts/rebuildhttpdconf && service httpd restart;
 
 
-
 Please remember you must also look into editing your Cpanel Config, Exim Config and Mail Server Config SSL Ciphers for PCI compliance that is not covered here
+
+###LEGAL
+
+This content is a guide. No libaliy (ie. security holes, content loss or server downtime) or support, finance, etc can be applied for usage of this content what-so-ever so if you use this guide you are entirly responsible for anything that may or does go wrong.
 
