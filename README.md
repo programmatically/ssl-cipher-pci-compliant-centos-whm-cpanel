@@ -1,6 +1,17 @@
 # ssl-cipher-pci-compliant-centos-whm
 This project is aimed at getting a PCI compliant SSL cipher server set-up for Centos/WHM that will still get an A+ on ssllabs.com
 
+-V WHM 11.52.1
+
+##instructions
+
+###part 1
+
+For the SSL Cipher Suite please read the instructions in the file
+
+
+
+###part 2
 
 To upate post_virtualhost_global.conf and pre_virtualhost_global.conf navigate to...
 
