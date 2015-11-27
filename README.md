@@ -13,6 +13,11 @@ For the SSL Cipher Suite please read the instructions in the file
 
 ###Part 2
 
+####Please note that
+You only actually need the contents of pre_virtualhost_global.conf - basic for the SSL cypher PCI compliance; the rest of the content is for extra security and gzip/deflate that is added in the same area. Hopefully this will be a time saver for you.
+
+
+####Instructions for part 2
 To upate post_virtualhost_global.conf and pre_virtualhost_global.conf navigate to...
 
 Service Configuration > Apache Configuration > Include Editor
@@ -26,6 +31,8 @@ SSH
 
 after updating these files you must rebuild
 ###/scripts/rebuildhttpdconf && service httpd restart;
+
+
 
 ##Other
 
