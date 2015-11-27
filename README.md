@@ -1,7 +1,8 @@
-# ssl-cipher-pci-compliant-centos-whm
+# ssl-cipher-pci-compliant-centos-whm-cpanel
+
 This project is aimed at getting a PCI compliant SSL cipher server set-up for Centos/WHM that will still get an A+ on ssllabs.com
 
--V WHM 11.52.1
+-V WHM 11.52.1 + Cpanel
 
 ##Instructions
 
