@@ -1,20 +1,31 @@
-SSLProtocol ALL -SSLv2 -SSLv3
+<IfModule mod_ssl.c>
 
+SSLProtocol All -TLSv1 -SSLv2 -SSLv3
 SSLHonorCipherOrder On
-
 SSLCompression off
+SSLProxyCheckPeerCN off
+SSLStrictSNIVHostCheck On
+SSLProxyEngine off
+SSLVerifyClient optional
+SSLSessionTickets on
 
 SSLUseStapling on
-
 SSLStaplingResponderTimeout 5
-
 SSLStaplingReturnResponderErrors off
-
-SSLStaplingCache "shmcb:logs/ssl_stapling(32768)"
+SSLStaplingResponseMaxAge 900
+## SSLStaplingCache "shmcb:logs/ssl_stapling(32768)"
+SSLStaplingCache "shmcb:/tmp/stapling_cache(128000)"
 
 Header add Strict-Transport-Security "max-age=15768000"
 
-<Directory /usr/local/apache2/htdocs>
-# but finally deny all browsers which haven't upgraded
-SSLRequire %{SSL_CIPHER_USEKEYSIZE} >= 128
-</Directory>
+SSLOptions +FakeBasicAuth +OptRenegotiate -StrictRequire -ExportCertData -StdEnvVars
+
+<IfModule mod_headers.c>
+
+# Fixes for IE being, well, IE...
+BrowserMatch "MSIE [2-6]" nokeepalive ssl-unclean-shutdown \downgrade-1.0 force-response-1.0
+BrowserMatch "MSIE [17-9]" ssl-unclean-shutdown
+
+</IfModule>
+
+</IfModule>
