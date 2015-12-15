@@ -1,23 +1,23 @@
 Service Configuration > Apache Configuration > Global Configuration
 
-#Option1: A more friendly to older browsers Cipher
+#Option1: A+ more friendly to older browsers Cipher
 
 ###SSL Cipher Suite:
 
-HIGH:-MEDIUM:-LOW:-EXP:!eNULL:!EXPORT:!CAMELLIA:!SEED:!SRP:!aDHL:!DH:!3DES:!NULL:!aNULL:!DES:!RC4:!RC4-SHA:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA:-SSLv2:SSLv23:!SSLv3:@STRENGTH
+ALL:+HIGH:-MEDIUM:-LOW:-EXP:!eNULL:!EXPORT:!CAMELLIA:!SEED:!SRP:!3DES:!NULL:!aNULL:!DES:!RC4:!RC4-SHA:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA:-TLSv1:+TLSv1_1:+TLSv1_2:-SSLv2:SSLv23:@STRENGTH
 
 ###SSL/TLS Protocols:
 
-All -SSLv2 !SSLv3 -TLSv1
+All -SSLv2 -SSLv3 -TLSv1
 
 
-#Option2: A more robust Cipher but older browsers will display a certificate warning or blank page
+#Option2: Should pass PCI Compliant scans but gets an -A in ssllabs; more robust Cipher but older browsers will display a certificate warning or blank page
 
-HIGH:!MEDIUM:!LOW:!EXP:!eNULL:!EXPORT:!CAMELLIA:!SEED:!SRP:!3DES:!aDH:!DH:!NULL:!aNULL:!DES:!RC4:!RC4-SHA:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA:!SSLv2:!SSLv3:@STRENGTH
+ALL:+HIGH:!MEDIUM:!LOW:-EXP:!eNULL:!EXPORT:!CAMELLIA:!SEED:!SRP:!3DES:!NULL:!aNULL:!DES:!RC4:!RC4-SHA:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA:-TLSv1:+TLSv1_1:+TLSv1_2:-SSLv2:SSLv23:@STRENGTH
 
 ###SSL/TLS Protocols:
 
-All !SSLv2 !SSLv3 -TLSv1
+All !SSLv2 !SSLv3 !TLSv1
 
 
 
